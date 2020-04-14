@@ -30,6 +30,9 @@ LAYER_NAME=$(basename $PWD)
 if [ ! -f requirements.txt ];
   then
     echo "Cannot build lambda layer! [requirements.txt not found in $BUILD_DIR]"
+    echo "Try something like:"
+    echo "    <path-to>/lambda_layer_publish_version.sh <lambda_layers_src_dir/<layer_src>"
+    echo "    _buildtools/lambda_layer_publish_version.sh lambda_layers/taskcat_layer"
     exit 1
 fi
 
